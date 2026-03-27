@@ -1,7 +1,7 @@
 FROM ghcr.io/openclaw/openclaw:latest
 
-ENV OPENCLAW_GATEWAY_PORT=8080
-ENV OPENCLAW_GATEWAY_BIND=lan
+COPY openclaw.json /home/node/.openclaw/openclaw.json
+
 ENV OPENCLAW_HEADLESS=true
 
 EXPOSE 8080
