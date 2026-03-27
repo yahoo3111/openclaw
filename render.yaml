@@ -6,11 +6,11 @@ services:
     region: singapore
     healthCheckPath: /healthz
     envVars:
-      - key: PORT
+      - key: OPENCLAW_GATEWAY_PORT
         value: "8080"
-      - key: CLAWDBOT_GATEWAY_PORT
-        value: "8080"
-      - key: CLAWDBOT_GATEWAY_BIND
-        value: "0.0.0.0"
+      - key: OPENCLAW_GATEWAY_BIND
+        value: "lan"
+      - key: OPENCLAW_HEADLESS
+        value: "true"
       - key: SETUP_PASSWORD
         sync: false
