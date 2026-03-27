@@ -6,4 +6,4 @@ ENV OPENCLAW_HEADLESS=true
 
 EXPOSE 8080
 
-ENTRYPOINT ["/init.sh"]
+CMD ["sh", "/init.sh"]

@@ -11,4 +11,5 @@ cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
   }
 }
 CONFIG
-exec docker-entrypoint.sh node openclaw.mjs gateway --allow-unconfigured
+cd /home/node
+exec node openclaw.mjs gateway --allow-unconfigured
