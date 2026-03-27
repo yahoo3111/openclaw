@@ -6,6 +6,4 @@ ENV OPENCLAW_HEADLESS=true
 
 EXPOSE 8080
 
-WORKDIR /home/node
-
 CMD ["sh", "/home/node/start.sh"]

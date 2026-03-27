@@ -12,4 +12,4 @@ cat > /tmp/openclaw/openclaw.json << 'CONFIG'
 }
 CONFIG
 export OPENCLAW_CONFIG_DIR=/tmp/openclaw
-exec node openclaw.mjs gateway --allow-unconfigured
+exec node /home/node/openclaw.mjs gateway --allow-unconfigured
