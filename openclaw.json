@@ -1,9 +1,0 @@
-{
-  "gateway": {
-    "port": 8080,
-    "bind": "lan",
-    "auth": {
-      "mode": "token"
-    }
-  }
-}
