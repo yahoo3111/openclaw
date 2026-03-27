@@ -1,9 +1,10 @@
 FROM ghcr.io/openclaw/openclaw:latest
 
-COPY start.sh /app/start.sh
-
 ENV OPENCLAW_HEADLESS=true
+ENV OPENCLAW_GATEWAY_PORT=8080
+ENV OPENCLAW_GATEWAY_BIND=lan
+ENV OPENCLAW_GATEWAY_CONTROL_UI_DANGEROUSLY_ALLOW_HOST_HEADER_ORIGIN_FALLBACK=true
 
 EXPOSE 8080
 
-CMD ["sh", "/app/start.sh"]
+# 不指定 CMD，用官方預設
