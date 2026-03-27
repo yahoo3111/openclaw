@@ -1,9 +1,12 @@
 FROM ghcr.io/openclaw/openclaw:latest
 
-COPY openclaw.json /home/node/.openclaw/openclaw.json
+COPY start.sh /home/node/start.sh
+RUN chmod +x /home/node/start.sh
 
 ENV OPENCLAW_HEADLESS=true
 
 EXPOSE 8080
 
-CMD ["node", "openclaw.mjs", "gateway", "--allow-unconfigured"]
+WORKDIR /home/node
+
+CMD ["/home/node/start.sh"]
