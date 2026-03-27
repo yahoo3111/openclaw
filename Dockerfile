@@ -1,9 +1,8 @@
 FROM ghcr.io/openclaw/openclaw:latest
 
 COPY init.sh /init.sh
-
-ENV OPENCLAW_HEADLESS=true
+RUN chmod +x /init.sh
 
 EXPOSE 8080
 
-CMD ["sh", "/init.sh"]
+ENTRYPOINT ["/init.sh"]
