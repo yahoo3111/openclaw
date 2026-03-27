@@ -14,8 +14,11 @@ cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
 }
 CONFIG
 
-# 確保權限正確
+# 改權限
 chown -R node:node /home/node/.openclaw
 
-# 切換到 node 用戶執行官方命令
+# 直接用 gosu 或 setpriv 切換用戶（不需要密碼）
+# 如果沒有，就用官方原來的方式啟動，但指定用戶
+exec setpriv --reuid=node --regid=node --init-groups node openclaw.mjs gateway --allow-unconfigured 2>/dev/null || \
+exec runuser -u node -- node openclaw.mjs gateway --allow-unconfigured 2>/dev/null || \
 exec su -s /bin/sh node -c "node openclaw.mjs gateway --allow-unconfigured"
