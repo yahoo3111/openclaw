@@ -12,20 +12,11 @@ cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
       "allowInsecureAuth": true,
       "allowedOrigins": ["*"]
     }
-  },
-  "llm": {
-    "provider": "openrouter",
-    "model": "anthropic/claude-opus-4"
   }
 }
 CONFIG
 
-# 從環境變數取得 API Key
-if [ -n "$OPENROUTER_API_KEY" ]; then
-  echo "OPENROUTER_API_KEY is set"
-else
-  echo "WARNING: OPENROUTER_API_KEY not set"
-fi
+echo "OPENROUTER_API_KEY is set: ${OPENROUTER_API_KEY:0:20}..."
 
 chown -R node:node /home/node/.openclaw
 export HOME=/home/node
