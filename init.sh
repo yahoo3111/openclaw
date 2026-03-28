@@ -4,10 +4,10 @@ cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
 {
   "gateway": {
     "port": 10000,
-    "bind": "0.0.0.0",
+    "bind": "lan",
     "controlUi": {
       "enabled": true,
-      "allowedOrigins": ["https://openclaw-render-cdjs.onrender.com","https://openclaw-render-cdjs.onrender.com/__openclaw__/canvas/"]
+      "allowedOrigins": ["https://openclaw-render-cdjs.onrender.com"]
     }
   }
 }
