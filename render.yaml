@@ -4,9 +4,11 @@ services:
     runtime: docker
     plan: free
     region: singapore
-    healthCheckPath: /healthz
+    healthCheckPath: /health
     envVars:
-      - key: OPENCLAW_HEADLESS
-        value: "true"
+      - key: OPENCLAW_GATEWAY_PORT
+        value: "10000"
       - key: SETUP_PASSWORD
         sync: false
+      - key: OPENCLAW_HEADLESS
+        value: "true"
