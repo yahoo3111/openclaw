@@ -7,7 +7,8 @@ cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
     "bind": "lan",
     "controlUi": {
       "enabled": true,
-      "allowInsecureAuth": true
+      "allowInsecureAuth": true,
+      "allowedOrigins": ["https://openclaw-render-fht8.onrender.com", "http://localhost:10000", "http://127.0.0.1:10000"]
     }
   }
 }
