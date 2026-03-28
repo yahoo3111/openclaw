@@ -8,7 +8,7 @@ cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
     "controlUi": {
       "enabled": true,
       "allowInsecureAuth": true,
-      "allowedOrigins": ["https://openclaw-render-fht8.onrender.com", "http://localhost:10000", "http://127.0.0.1:10000"]
+      "allowedOrigins": ["https://openclaw-render-cdjs.onrender.com","http://localhost:10000","http://127.0.0.1:10000"]
     }
   }
 }
