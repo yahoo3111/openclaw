@@ -1,4 +1,7 @@
 #!/bin/sh
+# 刪除舊 config 避免衝突
+rm -rf /home/node/.openclaw
+
 mkdir -p /home/node/.openclaw
 cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
 {
