@@ -6,9 +6,7 @@ cat > /home/node/.openclaw/openclaw.json << 'CONFIG'
     "port": 10000,
     "bind": "lan",
     "controlUi": {
-      "enabled": true,
-      "allowInsecureAuth": true,
-      "allowedOrigins": ["https://openclaw-render-cdjs.onrender.com","http://localhost:10000","http://127.0.0.1:10000"]
+      "enabled": true
     }
   }
 }
