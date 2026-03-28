@@ -10,5 +10,7 @@ services:
         value: "10000"
       - key: SETUP_PASSWORD
         value: "your-password-123"
+      - key: OPENCLAW_GATEWAY_TOKEN
+        value: "a3a8caa07e113a0eb2e9813d9f148e79964173c0c5e5a332ec4797533189694e"
       - key: OPENCLAW_HEADLESS
         value: "true"
